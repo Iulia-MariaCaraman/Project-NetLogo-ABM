@@ -1,19 +1,21 @@
-# Simulare NetLogo - Adoptarea Panourilor Solare
-Proiect realizat pentru facultate la materia **Bazele Ciberneticii Economice**.
+# Multi-Agent Simulation: Resource Dynamics and Agent Interactions
 
-## Despre proiect
-Am realizat un model în **NetLogo** prin care am vrut să văd cum decid oamenii dintr-o comunitate să își monteze panouri fotovoltaice în perioada **2015 - 2030**.
+Laboratory coursework developed for **Foundations of Economic Cybernetics**.
 
-În model avem 100 de gospodării reprezentate ca mici case. În fiecare an, fiecare casă ia o decizie: își pune sau nu panouri? 
-Decizia depinde de două lucruri:
-1. **Bani:** dacă merită financiar, energia scumpindu-se în timp, iar panourile devenind mai ieftine.
-2. **Vecini:** dacă cei din jur au deja panouri - influența socială.
+## Overview
+This **NetLogo** project models a multi-agent system consisting of two heterogeneous agent populations interacting in a shared environment with renewable resources, grass patches.
 
-Când o casă decide să își pună panouri, își schimbă culoarea din roz deschis în galben.
+The model highlights key cybernetic system concepts:
+1. **Autonomy & Local Rules:** Each agent moves randomly and expends energy at each step (`energy - 1`). When stepping onto a green patch, the agent consumes the resource, gains energy, and turns the patch brown.
+2. **Direct Agent Interactions:** Car-shaped agents (`agents2`) that occupy the same space as pedestrian agents (`agents1`) transfer energy to them and change color to yellow.
+3. **Environment Regeneration:** Depleted patches have a fixed probability of regenerating over time.
+4. **Emergent Behavior & Selection:** Agents whose energy reaches zero are automatically removed from the system (`die`).
 
-## Ce am observat?
-Chiar dacă fiecare gospodărie decide separat, per total se formează o „curbă în S”: la început adopția este lentă, iar după ce câțiva vecini încep să își pună panouri, fenomenul se răspândește mult mai repede.
+## Repository Contents
+* `Tema 1 seminar 2 - NetLogo.nlogo` - NetLogo simulation model source code.
+* `Tema 1 seminar 2 Bazele Ciberneticii.docx` - Theoretical analysis covering autonomy, complexity, and adaptive behavior.
 
-## Fișiere din proiect
-* `NetLogo Gospodarii.nlogox3d` - fișierul cu simularea și codul.
-* `Prezentare_BCE_Caraman.pptx` - prezentarea în PowerPoint în care am explicat rezultatele și le-am comparat cu două articole științifice.
+## How to Run
+1. Open the model in **NetLogo**.
+2. Click **setup** to initialize the agents and the grid.
+3. Click **go** to run the simulation.
